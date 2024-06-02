@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Font size (labels): 16px */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green-lighter: hsl(148, 38%, 91%);
+    --green-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+    --white: hsl(0, 0%, 100%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+
+
+}
+
+body {
+    height: auto;
+    background-color: var(--green-lighter);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+}
+
+.container {
+
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--white);
+    width: 37rem;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1rem;
+    color: var(--grey-darker);
+}
+
+
+
+.normal {
+    outline: none;
+    border: 0.1rem solid var(--grey-medium);
+    border-radius: 7px;
+    height: 2.7rem;
+    width: 100%;
+    display: block;
+    margin-top: 0.4rem;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.4rem;
+}
+
+.error {
+    border: 0.1rem solid var(--red);
+    outline: none;
+    border-radius: 3px;
+    height: 2.5rem;
+    width: 100%;
+    display: block;
+    margin-top: 0.4rem;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+    padding: 0.4rem;
+}
+
+#circle1,
+#circle2 {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--grey-medium);
+    margin-right: 0.7rem;
+    cursor: pointer;
+}
+
+input:hover,
+input:focus,
+input:active {
+    border: 0.1rem solid var(--green-medium);
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.input1 {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 0.5rem;
+}
+
+img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.7rem;
+    cursor: pointer;
+}
+
+
+
+.name {
+    /* border: 1px solid black; */
+    width: 80%;
+}
+
+.required,
+.email-error {
+    margin-top: 0.7rem;
+    display: none;
+    color: var(--red);
+    font-size: 0.8rem;
+}
+
+.input2,
+.input3 {
+    padding: 0.5rem;
+    width: 100%;
+}
+
+
+
+
+.query {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    /* border: 1px solid black; */
+}
+
+.inline_input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 0.1rem solid var(--grey-medium);
+    width: 80%;
+    height: 2.7rem;
+    /* margin-right: 1rem; */
+    border-radius: 5px;
+    padding: 1.3rem;
+}
+
+.inline_input:focus,
+.inline_input:active {
+    background-color: var(--green-lighter);
+}
+
+
+
+
+.input4 {
+    /* border: 1px solid black; */
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.message {
+    margin-top: 0.5rem;
+    display: block;
+    outline: none;
+    width: 100%;
+    height: 6rem;
+    border: 0.1rem solid var(--grey-medium);
+    border-radius: 7px;
+    padding: 0.6rem;
+    resize: none;
+    font-size: 1rem;
+}
+
+.errorMsg {
+    border: 0.1rem solid var(--red);
+    margin-top: 0.5rem;
+    display: block;
+    outline: none;
+    width: 100%;
+    height: 6rem;
+    border-radius: 7px;
+    padding: 0.6rem;
+    resize: none;
+    font-size: 1rem;
+}
+
+.input5 {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#checkbox {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.7rem;
+    border: 2px solid var(--grey-medium);
+    padding: 0.1rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#contain {
+    display: flex;
+    align-items: center;
+}
+
+
+
+button {
+    background-color: var(--green-medium);
+    color: var(--white);
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 2.7rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    transition: background-color 0.5s ease;
+}
+
+button:hover {
+    background-color: hsl(155, 30%, 11%);
+}
+
+.modal {
+    height: 6.5rem;
+    width: 23rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey-darker);
+    z-index: 10;
+    color: var(--white);
+    padding: 1.5rem 1rem 1rem 1rem;
+    border-radius: 7px;
+    font-size: 0.8rem;
+}
+
+.modal h3 {
+    display: flex;
+    justify-content: start;
+}
+
+.modal p {
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.modal img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.4rem;
+
+}
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+    body {
+        height: 200vh;
+    }
+
+    .container {
+        width: 340px;
+        padding: 1rem;
+    }
+
+    .modal {
+        display: none;
+    }
+
+    .input1 {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .name {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .query {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inline_input {
+        width: 100%;
+    }
+
+    .input4 {
+        width: 97%;
+    }
+
+    .message {
+        height: 13rem;
+        width: 100%;
+    }
+
+    #checkbox {
+        display: inline-block;
+        width: 1.3rem;
+        height: 1rem;
+        margin-right: 1rem;
+        border: 2px solid var(--grey-medium);
+        padding: 0.1rem;
+        border-radius: 2px;
+    }
+
+    #contain {
+        width: 100%;
+    }
+
+
+}
